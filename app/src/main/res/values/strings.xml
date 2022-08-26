@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ChallengeWeek2</string>
+    <string name="helperText">How was the service ?</string>
+    <string name="hint">Cost Of Service</string>
+    <string name="label_1">Amazing (20%)</string>
+    <string name="label_2">Good (18%)</string>
+    <string name="label_3">OK (15%)</string>
+    <string name="label_4">Round up tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="dialogText">Kuyy follow instagram ku, klik tombol dibawah yaa</string>
+</resources>

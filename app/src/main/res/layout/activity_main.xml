@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp10"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_glass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/glass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp20">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="250dp"
+                android:layout_height="140dp"
+                android:src="@drawable/bitcoin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etInputLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:startIconDrawable="@drawable/ic_cost"
+                app:endIconMode="clear_text"
+                app:helperTextEnabled="true"
+                app:startIconTint="@color/blue"
+                android:layout_marginTop="5dp"
+                app:helperText="@string/helperText"
+                app:hintAnimationEnabled="true"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/image">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint"
+                    android:inputType="number"
+                    android:fontFamily="@font/poppins_regular"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                app:layout_constraintTop_toBottomOf="@+id/etInputLayout"
+                style="Widget.MaterialComponents.CompoundButton.RadioButton"
+                >
+
+                <RadioButton
+                    android:id="@+id/radio_button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_1"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_regular"
+                    app:buttonTint="@color/blue"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_2"
+                    android:fontFamily="@font/poppins_regular"
+                    app:buttonTint="@color/blue"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_3"
+                    android:fontFamily="@font/poppins_regular"
+                    app:buttonTint="@color/blue"/>
+            </RadioGroup>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_4"
+                android:layout_marginTop="@dimen/dp10"
+                android:checked="true"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalc"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:text="@string/calculate"
+                android:textAllCaps="false"
+                android:padding="@dimen/dp15"
+                app:icon="@drawable/ic_calc"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_regular"
+                app:strokeColor="@color/blue"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:shapeAppearance="@style/ShapeAppearance.App.SmallComponent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/switches" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tip_amount"
+                android:layout_marginTop="@dimen/dp10"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnCalc"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
